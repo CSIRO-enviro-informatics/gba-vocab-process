@@ -1,0 +1,35 @@
+# baseURI: http://registry.it.csiro.au/ont/gba-approval
+# imports: http://purl.org/dc/elements/1.1/
+# imports: http://purl.org/linked-data/registry
+# imports: http://www.w3.org/2004/02/skos/core
+# prefix: gba
+
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix gba: <http://registry.it.csiro.au/ont/gba-approval/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<approvalNote>
+  rdf:type owl:AnnotationProperty ;
+  rdfs:domain skos:Concept ;
+  rdfs:label "approval note" ;
+  dcterms:description "Note from PLG" ;
+  rdfs:subPropertyOf skos:editorialNote ;
+.
+<reviewNote>
+  rdf:type owl:AnnotationProperty ;
+  rdfs:domain skos:Concept ;
+  rdfs:label "review note" ;
+  dcterms:description "Note from discipline- or basin-leader" ;
+  rdfs:subPropertyOf skos:editorialNote ;
+.
+<status>
+  rdf:type owl:AnnotationProperty ;
+  rdfs:domain skos:Concept ;
+  rdfs:label "workflow status" ;
+  dcterms:description "Status in GBA approval process" ;
+.
